@@ -1,0 +1,22 @@
+GET http://localhost:3000/products/3?kevin=6
+
+###
+
+POST http://localhost:3000/more
+Content-Type: application/json
+
+{
+	"title" : "test",
+	"id" : 5
+}
+
+###
+
+POST http://localhost:3000/add
+Content-Type: application/json
+
+{
+	"title" : "test-add",
+	"id" : 56
+}
+
