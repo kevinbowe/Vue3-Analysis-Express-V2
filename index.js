@@ -1,5 +1,3 @@
-// console.log("Hello World")
-
 import Express from "express"
 import Products from "./products.js"
 
