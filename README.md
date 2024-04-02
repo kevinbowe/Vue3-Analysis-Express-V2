@@ -1,4 +1,4 @@
-# Vue3-Analysis-Express-V1
+# Vue3-Analysis-Express-V2
 
 
 This is a functional demonstration of Express and VSCode RestClient Extension.
@@ -43,7 +43,7 @@ To start Express enter this in Terminal:
 
 OBSERVE
 
-	vue3-analysis-express-v1@1.0.0 start
+	vue3-analysis-express-v2@1.0.0 start
 	node index.js
 
 	"Listening on port: 3000"
