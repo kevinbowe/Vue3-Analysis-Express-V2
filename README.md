@@ -74,7 +74,7 @@ Select one of the links and the request will be sent.
 
 Sometimes the links are visible but will not function. Moving from one page to another sometimes recovers the functionality. Stopping and Starting Express sometimes works.
 
-## <mark style="color:yellow;">Example - GET</mark>
+## <mark style="color:blue;">Example - GET</mark>
 
 &#x20;`GET` [`http://localhost:3000/products/3?kevin=6`](http://localhost:3000/products/3?kevin=6)
 
@@ -108,7 +108,7 @@ Sometimes the links are visible but will not function. Moving from one page to a
 
 `{ id: '3' }`
 
-## &#x20;<mark style="color:yellow;">Example - GET</mark>
+## &#x20;<mark style="color:blue;">Example - GET</mark>
 
 #### <mark style="color:red;">Note</mark>
 
@@ -160,7 +160,7 @@ The only difference between this example and the next example is the PATH. This 
 
 
 
-## <mark style="color:yellow;">Example - POST</mark>
+## <mark style="color:blue;">Example - POST</mark>
 
 `POST http://localhost:3000/more`
 
