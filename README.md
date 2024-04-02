@@ -5,7 +5,7 @@ description: Technical notes related to this project.
 # Vue3-Analysis-Express
 
 ## <mark style="color:blue;">Introduction</mark>
-       
+
 This is a functional demonstration of Express and VSCode RestClient Extension.
 
 Express is a Nodejs application that allows a developer to create a locally running host.
@@ -14,19 +14,15 @@ The host will respond to HTTP requests: GET, PUT, POST, DELETE
 
 RestClient Extension allows a developer to compose and execute HTTP requests.
 
-
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>This is Card One</td><td></td><td></td></tr><tr><td>This is Card Two</td><td></td><td></td></tr><tr><td>Card Three</td><td></td><td>This is New data</td></tr></tbody></table>
-
 The combination of Express and RestClient allow a developer to design, develop and test HTTP commands w/o any traditional backend.
 
 ## <mark style="color:blue;">Setup</mark>
 
 To get this project to function, TWO things are required:
 
-&#x20;           Express
+Express
 
-&#x20;           VSCode RestClient Extension.
+VSCode RestClient Extension.
 
 #### <mark style="color:blue;">Express</mark>
 
@@ -34,13 +30,13 @@ Express is already defined in the package.json.
 
 To install from the package.json, enter this in a terminal:
 
-&#x20;           `$ node init`
+`$ node init`
 
 This will read the package.json and install all of the required packages in the node\_modules folder.
 
 If Node Express has NOT been installed, enter this in a terminal:
 
-&#x20;           `$ npm install express`
+`$ npm install express`
 
 #### <mark style="color:blue;">VSCode RestClient Extension</mark>
 
@@ -62,25 +58,25 @@ To start Express enter this in Terminal:
 
 `"Listening on port: 3000"`
 
-&#x20;<mark style="color:yellow;">Run HTTP Requests</mark>
+<mark style="color:yellow;">Run HTTP Requests</mark>
 
-&#x20;To test the existing HTTP requests, open the http.rest file.
+To test the existing HTTP requests, open the http.rest file.
 
 After Express is running, you will see “Send Request” links above the example HTTP requests.
 
 Select one of the links and the request will be sent.
 
-&#x20;<mark style="color:red;">Note</mark>
+<mark style="color:red;">Note</mark>
 
 Sometimes the links are visible but will not function. Moving from one page to another sometimes recovers the functionality. Stopping and Starting Express sometimes works.
 
 ## <mark style="color:blue;">Example - GET</mark>
 
-&#x20;`GET` [`http://localhost:3000/products/3?kevin=6`](http://localhost:3000/products/3?kevin=6)
+`GET` [`http://localhost:3000/products/3?kevin=6`](http://localhost:3000/products/3?kevin=6)
 
 #### <mark style="color:blue;">VSCode Tab Output</mark>
 
-&#x20;`HTTP/1.1 200 OK`
+`HTTP/1.1 200 OK`
 
 `X-Powered-By: Express`
 
@@ -94,7 +90,7 @@ Sometimes the links are visible but will not function. Moving from one page to a
 
 `Connection: close`
 
-&#x20;`{`
+`{`
 
 `"id": 3,`
 
@@ -102,13 +98,13 @@ Sometimes the links are visible but will not function. Moving from one page to a
 
 `}`
 
-&#x20;<mark style="color:blue;">Terminal</mark>
+<mark style="color:blue;">Terminal</mark>
 
-&#x20;`{ kevin: '6' }`
+`{ kevin: '6' }`
 
 `{ id: '3' }`
 
-## &#x20;<mark style="color:blue;">Example - GET</mark>
+## <mark style="color:blue;">Example - GET</mark>
 
 #### <mark style="color:red;">Note</mark>
 
@@ -120,13 +116,11 @@ The only difference between this example and the next example is the PATH. This 
 
 `Content-Type: application/json`
 
-&#x20;
-
 `{`
 
-&#x20;           `"title" : "test",`
+`"title" : "test",`
 
-&#x20;           `"id" : 5`
+`"id" : 5`
 
 `}`
 
@@ -146,11 +140,7 @@ The only difference between this example and the next example is the PATH. This 
 
 `Connection: close`
 
-&#x20;
-
 `OK`
-
-&#x20;
 
 #### <mark style="color:blue;">Terminal</mark>
 
@@ -158,21 +148,17 @@ The only difference between this example and the next example is the PATH. This 
 
 `test`
 
-
-
 ## <mark style="color:blue;">Example - POST</mark>
 
 `POST http://localhost:3000/more`
 
 `Content-Type: application/json`
 
-&#x20;
-
 `{`
 
-&#x20;           `"title" : "test",`
+`"title" : "test",`
 
-&#x20;           `"id" : 5`
+`"id" : 5`
 
 `}`
 
@@ -192,21 +178,15 @@ The only difference between this example and the next example is the PATH. This 
 
 `Connection: close`
 
-&#x20;
-
 `OK`
 
-&#x20;<mark style="color:blue;">Terminal</mark>
+<mark style="color:blue;">Terminal</mark>
 
 `56`
 
 `test-add`
 
-
-
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>Sample code</p></figcaption></figure>
-
-
 
 {% code lineNumbers="true" fullWidth="true" %}
 ````javascript
@@ -267,9 +247,6 @@ app.listen(port, () => console.log(`"Listening on port: ${port}"`) )
 ````
 {% endcode %}
 
-
-
 {% content-ref url="https://app.gitbook.com/o/fEd0zt5Oz5fKKTP5IxSP/snippet/11505" %}
 [index.js Example](https://app.gitbook.com/o/fEd0zt5Oz5fKKTP5IxSP/snippet/11505)
 {% endcontent-ref %}
-
