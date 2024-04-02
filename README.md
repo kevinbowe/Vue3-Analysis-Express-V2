@@ -1,145 +1,275 @@
-# Vue3-Analysis-Express-V2
+---
+description: Technical notes related to this project.
+---
 
+# Vue3-Analysis-Express
+
+## <mark style="color:yellow;">Introduction</mark>
 
 This is a functional demonstration of Express and VSCode RestClient Extension.
 
 Express is a Nodejs application that allows a developer to create a locally running host.
+
 The host will respond to HTTP requests: GET, PUT, POST, DELETE
 
 RestClient Extension allows a developer to compose and execute HTTP requests.
 
+
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>This is Card One</td><td></td><td></td></tr><tr><td>This is Card Two</td><td></td><td></td></tr><tr><td>Card Three</td><td></td><td>This is New data</td></tr></tbody></table>
+
 The combination of Express and RestClient allow a developer to design, develop and test HTTP commands w/o any traditional backend.
 
-To preview this file, run Markdown: Open Preview to Side.
+## <mark style="color:yellow;">Setup</mark>
 
-## Setup
 To get this project to function, TWO things are required:
-	Express
-	VSCode RestClient Extension.
 
-### Express
-Express is already defined in the package.json. 
+&#x20;           Express
+
+&#x20;           VSCode RestClient Extension.
+
+#### <mark style="color:blue;">Express</mark>
+
+Express is already defined in the package.json.
+
 To install from the package.json, enter this in a terminal:
 
-	$ node init
+&#x20;           `$ node init`
 
-This will read the package.json and install all of the required packages in the node_modules folder.
+This will read the package.json and install all of the required packages in the node\_modules folder.
 
 If Node Express has NOT been installed, enter this in a terminal:
 
-	$ npm install express
+&#x20;           `$ npm install express`
 
-### VSCode RestClient Expension
+#### <mark style="color:blue;">VSCode RestClient Extension</mark>
 
 This is a VSCode extension that is available for download in the VSCode Marketplace.
 
-## Running the Application
+#### Running the Application
 
-### Start Express
+## <mark style="color:yellow;">Start Express</mark>
 
 To start Express enter this in Terminal:
-	
-	$ npm start
 
-OBSERVE
+`$ npm start`
 
-	vue3-analysis-express-v2@1.0.0 start
-	node index.js
+<mark style="background-color:yellow;">**OBSERVE**</mark>
 
-	"Listening on port: 3000"
+`vue3-analysis-express-v1@1.0.0 start`
 
-### Run HTTP Requests
+`node index.js`
 
-To test the existing HTTP requests, open the http.rest file.
+`"Listening on port: 3000"`
+
+&#x20;<mark style="color:yellow;">Run HTTP Requests</mark>
+
+&#x20;To test the existing HTTP requests, open the http.rest file.
+
 After Express is running, you will see “Send Request” links above the example HTTP requests.
+
 Select one of the links and the request will be sent.
 
-<h3>Note</h3>
+&#x20;<mark style="color:red;">Note</mark>
+
+Sometimes the links are visible but will not function. Moving from one page to another sometimes recovers the functionality. Stopping and Starting Express sometimes works.
+
+## <mark style="color:yellow;">Example - GET</mark>
+
+&#x20;`GET` [`http://localhost:3000/products/3?kevin=6`](http://localhost:3000/products/3?kevin=6)
+
+#### <mark style="color:blue;">VSCode Tab Output</mark>
+
+&#x20;`HTTP/1.1 200 OK`
+
+`X-Powered-By: Express`
+
+`Content-Type: application/json; charset=utf-8`
+
+`Content-Length: 22`
+
+`ETag: W/"16-CtQt77GINx9Tqa9fkaAcPSvmRJE"`
+
+`Date: Mon, 01 Apr 2024 14:42:24 GMT`
+
+`Connection: close`
+
+&#x20;`{`
+
+`"id": 3,`
+
+`"name": "Shoe"`
+
+`}`
+
+&#x20;<mark style="color:blue;">Terminal</mark>
+
+&#x20;`{ kevin: '6' }`
+
+`{ id: '3' }`
+
+## &#x20;<mark style="color:yellow;">Example - GET</mark>
+
+#### <mark style="color:red;">Note</mark>
+
+The only difference between this example and the next example is the PATH. This demostrates using multiple paths can generate dofferent results.\
+\
+`GET` [`http://localhost:3000/products/3?kevin=6`](http://localhost:3000/products/3?kevin=6)
+
+`POST http://localhost:3000/more`
+
+`Content-Type: application/json`
+
+&#x20;
+
+`{`
+
+&#x20;           `"title" : "test",`
+
+&#x20;           `"id" : 5`
+
+`}`
+
+#### <mark style="color:blue;">VSCode Tab Output</mark>
+
+`HTTP/1.1 200 OK`
+
+`X-Powered-By: Express`
+
+`Content-Type: text/plain; charset=utf-8`
+
+`Content-Length: 2`
+
+`ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"`
+
+`Date: Mon, 01 Apr 2024 14:47:03 GMT`
+
+`Connection: close`
+
+&#x20;
+
+`OK`
+
+&#x20;
+
+#### <mark style="color:blue;">Terminal</mark>
+
+`5`
+
+`test`
 
 
-	Sometimes the links are visible but will not function. Moving from one page to another sometimes recovers the functionality. Stopping and Starting Express sometimes works.
 
-## Example
+## <mark style="color:yellow;">Example - POST</mark>
 
-GET http://localhost:3000/products/3?kevin=6
+`POST http://localhost:3000/more`
 
-VSCode Tab Output
+`Content-Type: application/json`
 
-	HTTP/1.1 200 OK
-	X-Powered-By: Express 
-	Content-Type: application/json; charset=utf-8 
-	Content-Length: 22 
-	ETag: W/"16-CtQt77GINx9Tqa9fkaAcPSvmRJE" 
-	Date: Mon, 01 Apr 2024 14:42:24 GMT 
-	Connection: close 
+&#x20;
 
-	{ 
-		"id": 3, 
-		"name": "Shoe" 
-	}
+`{`
 
-Terminal 
+&#x20;           `"title" : "test",`
 
-	{ kevin: '6' }
-	{ id: '3' }
+&#x20;           `"id" : 5`
 
-## Example
+`}`
 
-	POST http://localhost:3000/more
-	Content-Type: application/json
+#### <mark style="color:blue;">VSCode Tab Output</mark>
 
-	{
-		"title" : "test",
-		"id" : 5
-	}
+`HTTP/1.1 200 OK`
 
-VSCode Tab Output
+`X-Powered-By: Express`
 
-	HTTP/1.1 200 OK 
-	X-Powered-By: Express 
-	Content-Type: text/plain; charset=utf-8 
-	Content-Length: 2 
-	ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc" 
-	Date: Mon, 01 Apr 2024 14:47:03 GMT 
-	Connection: close 
+`Content-Type: text/plain; charset=utf-8`
 
-	OK
+`Content-Length: 2`
 
-Terminal 
+`ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc"`
 
-	5
-	test
+`Date: Mon, 01 Apr 2024 14:48:43 GMT`
 
-## Example
+`Connection: close`
+
+&#x20;
+
+`OK`
+
+&#x20;<mark style="color:blue;">Terminal</mark>
+
+`56`
+
+`test-add`
 
 
-<h3>Note</h3>
-	The only difference between this example and the next example is the PATH.
-	This demostrates using multiple paths can generate dofferent results. <br><br>
 
-	POST http://localhost:3000/more
-	Content-Type: application/json
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>Sample code</p></figcaption></figure>
 
-	{
-		"title" : "test",
-		"id" : 5
-	}
 
-VSCode Tab Output
 
-	HTTP/1.1 200 OK 
-	X-Powered-By: Express 
-	Content-Type: text/plain; charset=utf-8 
-	Content-Length: 2 
-	ETag: W/"2-nOO9QiTIwXgNtWtBJezz8kv3SLc" 
-	Date: Mon, 01 Apr 2024 14:48:43 GMT 
-	Connection: close 
+{% code lineNumbers="true" fullWidth="true" %}
+````javascript
+``` https://app.gitbook.com/o/fEd0zt5Oz5fKKTP5IxSP/snippet/11508javascript
+import Express from "express"
+import Products from "./products.js"
 
-	OK
+const app = Express()
+const port = 3000
 
-Terminal 
+app.use(Express.json())
+app.use(Express.urlencoded({ extended: true }))
 
-	56
-	test-add
+function mid(request, response, next){
+	console.log(request.query)
+	console.log(request.params)
+	next()
+}
 
+//		 GET, PUT, POST, DELETE
+//				GET == Fetch Information from Target
+//				PUT == Change Information in Target
+//				POST == Add Information to Target
+//				DELETE == Delete Information in Target
+
+// 		app.get()
+// 		app.post()
+// 		app.delete
+// 		app.put()
+
+//			Arg1 -- Path
+//			Arg2 -- Middle ware (skip) or Callback if only 2x args
+//			Arg3 -- Callback
+//			request == Input
+//			response == Output
+app.get("/products/:id", mid, (request, response) => {
+	response.json(Products.find((product)=> {
+		//			request.params is a string.
+		//			Add '+' in from will convert the string value to a number
+		return +request.params.id === product.id	}))
+
+} )
+
+app.post("/more", ( request, response ) => {
+	response.sendStatus( 200 )
+	console.log(request.body.id)
+	console.log(request.body.title)
+})
+
+app.post("/add", ( request, response ) => {
+	response.sendStatus( 200 )
+	console.log(request.body.id)
+	console.log(request.body.title)
+})
+
+app.listen(port, () => console.log(`"Listening on port: ${port}"`) )
+```
+````
+{% endcode %}
+
+
+
+{% content-ref url="https://app.gitbook.com/o/fEd0zt5Oz5fKKTP5IxSP/snippet/11505" %}
+[index.js Example](https://app.gitbook.com/o/fEd0zt5Oz5fKKTP5IxSP/snippet/11505)
+{% endcontent-ref %}
 
