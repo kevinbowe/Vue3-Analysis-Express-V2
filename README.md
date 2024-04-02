@@ -4,7 +4,7 @@ description: Technical notes related to this project.
 
 # Vue3-Analysis-Express
 
-## <mark style="color:yellow;">Introduction</mark>
+## <mark style="color:blue;">Introduction</mark>
 
 This is a functional demonstration of Express and VSCode RestClient Extension.
 
@@ -20,7 +20,7 @@ RestClient Extension allows a developer to compose and execute HTTP requests.
 
 The combination of Express and RestClient allow a developer to design, develop and test HTTP commands w/o any traditional backend.
 
-## <mark style="color:yellow;">Setup</mark>
+## <mark style="color:blue;">Setup</mark>
 
 To get this project to function, TWO things are required:
 
@@ -48,7 +48,7 @@ This is a VSCode extension that is available for download in the VSCode Marketpl
 
 #### Running the Application
 
-## <mark style="color:yellow;">Start Express</mark>
+## <mark style="color:blue;">Start Express</mark>
 
 To start Express enter this in Terminal:
 
